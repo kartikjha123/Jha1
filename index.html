@@ -1,41 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Script</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <script src="myjs.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJ Software Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+        #hero {
+            background: #007BFF;
+            color: white;
+            padding: 50px 20px;
+        }
+        .btn {
+            background: #fff;
+            color: #007BFF;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        #contact {
+            background: #333;
+            color: #fff;
+            padding: 40px;
+        }
+        form input, form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
-<style>
-  
-  body {
-  
-    background-image: url('image/240_F_164586743_0PkW3eOREQymacFcfPJaftFpIABMR3tI.jpg'),url('image/240_F_599805592_alV3W704Bh50fg1Hh2ItnhAo8UtYStza.jpg');
-    background-size: cover, auto; 
-    background-repeat: no-repeat, repeat; 
-    background-position: center center, top left; 
-    background-color: #f0f0f0;
-    font-feature-settings: "ccmp";
-    
-}
-
-</style>
-
-
 <body>
-  <h1 id ="kj"> </h1>
-  <h1 id ="head" >  Welcome To KJ Software Solution</h1>
-  <div id="p">
-<p>Improve your career prospects as an IT professional with our 'Java Backend Live' course. This course is suitable for those with some Java knowledge and little to no experience in Java Networking Programming. The course covers advanced Java, Spring/Spring Boot, Hibernate, RESTful APIs, Micro-services & related technologies to improve and build efficient and attractive Java-based web applications.</p>
-
-<img src="image/240_F_164586743_0PkW3eOREQymacFcfPJaftFpIABMR3tI.jpg" alt="image"  width="500"  >
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi vero qui perspiciatis? Sunt, laudantium inventore? Quam suscipit adipisci porro similique magnam facilis aliquam, libero velit necessitatibus animi voluptate quod quasi doloribus nihil explicabo! Similique architecto dolorem veritatis, dolor earum magni.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus aliquam id similique neque voluptate consequuntur expedita, voluptatem ut mollitia et molestiae doloremque vel accusamus quia nihil. Provident et aliquid illum natus in magni beatae voluptate nihil commodi laboriosam iste reprehenderit doloremque laudantium, minima id corporis esse? Hic vitae ducimus eos molestias, quae nostrum! Atque nihil tempora facilis labore quasi nostrum in facere ipsum deserunt, recusandae necessitatibus exercitationem dolorem libero, laudantium laborum est odio, voluptas perspiciatis? Autem dicta vel modi, quae repellat nobis dignissimos suscipit id quidem sunt maxime sit aperiam odio. Eveniet quia quam eligendi, culpa temporibus facere ut ipsam.</p>
-</h1>
-</div>
+    <header>
+        <h1>KJ Software Solutions</h1>
+        <p>Java Developer | 3+ Years of Experience in Scalable Web Applications</p>
+    </header>
+    
+    <section id="hero">
+        <h2>Building Scalable and Secure Web Applications</h2>
+        <p>Expert in Spring Boot, Struts2, REST API, Microservices, and API Integrations</p>
+        <p>Delivering enterprise-grade solutions with robust security and cloud deployment</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+    
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="service">
+            <h3>Backend Development</h3>
+            <p>Spring Boot, Struts2, REST APIs, Microservices, Web Applications</p>
+        </div>
+        <div class="service">
+            <h3>Database Management</h3>
+            <p>MySQL, PostgreSQL, JPA, Hibernate, NoSQL Databases</p>
+        </div>
+        <div class="service">
+            <h3>Security & Authentication</h3>
+            <p>JWT, OAuth, Encryption, API Security, Secure Web Applications</p>
+        </div>
+        <div class="service">
+            <h3>Cloud & Deployment</h3>
+            <p>AWS, Docker, Kubernetes, CI/CD, Scalable API Solutions</p>
+        </div>
+        <div class="service">
+            <h3>API Development & Integration</h3>
+            <p>Third-Party API Integration, Payment Gateway, External Service Connectivity</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Let's discuss how I can help build and optimize your software solutions.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 </body>
 </html>
-
-
