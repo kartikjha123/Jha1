@@ -109,12 +109,36 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Let's discuss how I can help build and optimize your software solutions.</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    emailjs.init("kartikjhadbg@gmail.com"); // Replace with your EmailJS user ID
+
+    const templateParams = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_coh1wtn", "service_coh1wtn", templateParams)
+    .then(response => {
+        alert("Email sent successfully!");
+    })
+    .catch(error => {
+        console.error("Error sending email:", error);
+    });
+});
+</script>
+
+        
     </section>
 </body>
 </html>
