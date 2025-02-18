@@ -131,12 +131,15 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     };
 
     // Send email with correct Service ID and Template ID
-    emailjs.send("service_coh1wtn", "template_xwdu5yb", templateParams)
+    emailjs.send("service_ubutrsk", "template_kki1y7w", templateParams)
     .then(response => {
         alert("Email sent successfully!");
     })
-    .catch(error => {
-        console.error("Error sending email:", error);
+    ..catch(error => {
+    console.error("Error sending email:", error);
+    alert("Error: " + error.text); // Show error message
+});
+
     });
 });
 </script>
