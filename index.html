@@ -116,13 +116,13 @@
     <button type="submit">Send Message</button>
 </form>
  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    
-<script>
 
+<script>
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent default form submission
 
-    emailjs.init("yh9bRGSMtLD2tkpZH"); // Replace with your EmailJS user ID
+    // Initialize EmailJS with the correct Public Key
+    emailjs.init("yh9bRGSMtLD2tkpZH"); // Replace with actual Public Key from EmailJS
 
     const templateParams = {
         name: document.getElementById("name").value,
@@ -130,7 +130,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         message: document.getElementById("message").value
     };
 
-    emailjs.send("service_coh1wtn", "service_coh1wtn", templateParams)
+    // Send email with correct Service ID and Template ID
+    emailjs.send("service_coh1wtn", "template_xwdu5yb", templateParams)
     .then(response => {
         alert("Email sent successfully!");
     })
