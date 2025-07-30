@@ -107,42 +107,44 @@
     </section>
     
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Let's discuss how I can help build and optimize your software solutions.</p>
-        <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <h2>Contact Me</h2>
+    <p>Let's discuss how I can help build and optimize your software solutions.</p>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+    <p><strong>Email:</strong> <a href="mailto:kartikjhadbg@gmail.com" style="color: #fff;">kartikjhadbg@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+919576122752" style="color: #fff;">+91 9576122752</a></p>
 
-    // Initialize EmailJS with the correct Public Key
-    emailjs.init("yh9bRGSMtLD2tkpZH"); // Replace with actual Public Key from EmailJS
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 
-    const templateParams = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    };
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-    // Send email with correct Service ID and Template ID
-    emailjs.send("service_ubutrsk", "template_kki1y7w", templateParams)
-    .then(response => {
-        alert("Email sent successfully!");
-    })
-    ..catch(error => {
-    console.error("Error sending email:", error);
-    alert("Error: " + error.text); // Show error message
-});
+            emailjs.init("yh9bRGSMtLD2tkpZH"); // Replace with actual Public Key from EmailJS
 
-    });
-});
-</script>
+            const templateParams = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            emailjs.send("service_ubutrsk", "template_kki1y7w", templateParams)
+            .then(response => {
+                alert("Email sent successfully!");
+            })
+            .catch(error => {
+                console.error("Error sending email:", error);
+                alert("Error: " + error.text); // Show error message
+            });
+        });
+    </script>
+</section>
+
 
         
     </section>
